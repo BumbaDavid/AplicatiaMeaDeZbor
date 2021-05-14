@@ -4,31 +4,31 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-class DesktopApp$2 implements ActionListener {
-    DesktopApp$2(DesktopApp var1) {
+class DesktopApp$3 implements ActionListener {
+    DesktopApp$3(DesktopApp var1) {
         this.this$0 = var1;
     }
 
     public void actionPerformed(ActionEvent e) {
-        int result = 0;
-        String parolaString = new String(this.this$0.parola.getPassword());
-        User user;
-        if (this.this$0.client.isSelected()) {
-            if (this.this$0.nume_utilizator.getText().length() > 0 && parolaString.length() > 0 && this.this$0.prenume_nume.getText().length() > 0 && this.this$0.adresa.getText().length() > 0 && this.this$0.telefon.getText().length() > 0) {
-                user = new User(this.this$0.nume_utilizator.getText(), parolaString, this.this$0.prenume_nume.getText(), this.this$0.adresa.getText(), this.this$0.telefon.getText(), 0);
-                result = this.this$0.AirlineApi.AddUser(this.this$0.Conn, this.this$0.Url, this.this$0.User, this.this$0.Password, user);
-            }
-        } else if (this.this$0.admin.isSelected() && this.this$0.nume_utilizator.getText().length() > 0 && parolaString.length() > 0 && this.this$0.prenume_nume.getText().length() > 0 && this.this$0.adresa.getText().length() > 0 && this.this$0.telefon.getText().length() > 0) {
-            user = new User(this.this$0.nume_utilizator.getText(), parolaString, this.this$0.prenume_nume.getText(), this.this$0.adresa.getText(), this.this$0.telefon.getText(), 1);
-            result = this.this$0.AirlineApi.AddUser(this.this$0.Conn, this.this$0.Url, this.this$0.User, this.this$0.Password, user);
+        int result = false;
+        String nume_utilizator = this.this$0.nume_utilizator2.getText();
+        String parola = new String(this.this$0.parola2.getPassword());
+        int result = this.this$0.AirlineApi.GetUser(this.this$0.Conn, this.this$0.Url, this.this$0.User, this.this$0.Password, nume_utilizator, parola);
+        if (result == -1) {
+            JOptionPane.showMessageDialog(this.this$0.frame, "Numele si parola nu sunt corecte! Incercati din nou.");
+            this.this$0.nume_utilizator2.setText("");
+            this.this$0.parola2.setText("");
+        } else if (result == 0) {
+            JOptionPane.showMessageDialog(this.this$0.frame, "Bun venit! Puteti accesa sectiunea operatii client.");
+            this.this$0.operatiiClient.setVisible(true);
+            this.this$0.CreatePanel3();
+        } else if (result == 1) {
+            JOptionPane.showMessageDialog(this.this$0.frame, "Bun venit! Puteti accesa sectiunea operatii admin.");
+            this.this$0.operatiiAdmin.setVisible(true);
+            this.this$0.CreatePanel4();
         }
 
-        if (result == 1) {
-            JOptionPane.showMessageDialog(this.this$0.frame, "Inserarea s-a facut cu succes!");
-            this.this$0.CreatePanel2();
-        } else {
-            JOptionPane.showMessageDialog(this.this$0.frame, "Inserarea nu a reusit!");
-        }
-
+        this.this$0.childPanel2.revalidate();
+        this.this$0.childPanel2.repaint();
     }
 }
