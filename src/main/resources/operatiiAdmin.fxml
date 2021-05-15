@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminController">
+   <children>
+      <VBox layoutX="5.0" layoutY="6.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="1093.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Text>
+            <GridPane prefHeight="166.0" prefWidth="1074.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Plecare:" textAlignment="CENTER" wrappingWidth="101.599609375" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Destinatia:" textAlignment="CENTER" wrappingWidth="102.330078125" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" textAlignment="RIGHT" wrappingWidth="102.208984375" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tara" textAlignment="CENTER" wrappingWidth="74.669921875" GridPane.columnIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oras" textAlignment="CENTER" wrappingWidth="69.416015625" GridPane.columnIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aeroport:" textAlignment="CENTER" wrappingWidth="78.14453125" GridPane.columnIndex="3" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stare:" textAlignment="RIGHT" wrappingWidth="69.595703125" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Actualizare St." GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data Plecarii" textAlignment="CENTER" wrappingWidth="107.513671875" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data Sosirii" textAlignment="CENTER" wrappingWidth="108.3671875" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="YYYY-MM-DD" textAlignment="CENTER" wrappingWidth="118.5078125" GridPane.columnIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ora" textAlignment="CENTER" wrappingWidth="103.32421875" GridPane.columnIndex="6" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nr.Locuri" textAlignment="RIGHT" wrappingWidth="118.841796875" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" text="Actualizare Loc." GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" text="Sterge Zbor" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" text="Istoric" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numar Locuri:" textAlignment="CENTER" wrappingWidth="131.361328125" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Companie:" textAlignment="CENTER" wrappingWidth="131.53125" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Durata" textAlignment="CENTER" wrappingWidth="108.654296875" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pret(EURO)" textAlignment="CENTER" wrappingWidth="108.015625" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="10" GridPane.rowIndex="2" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="72.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="62.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="63.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="8.0" prefWidth="104.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="91.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="69.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="95.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="95.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
