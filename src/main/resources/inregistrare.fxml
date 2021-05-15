@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="136.0">
+            <children>
+                <Pane layoutY="1.0" prefHeight="199.0" prefWidth="136.0">
+                    <children>
+                        <TextField layoutY="49.0" prefHeight="95.0" prefWidth="136.0" text="Alege rolul:">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </TextField>
+                        <CheckBox contentDisplay="TOP" layoutY="125.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="136.0" text="Admin">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </CheckBox>
+                    </children>
+                </Pane>
+                <CheckBox layoutY="177.0" mnemonicParsing="false" prefHeight="227.0" prefWidth="213.0" text="Client">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </CheckBox>
+            </children>
+        </Pane>
+        <Pane prefHeight="400.0" prefWidth="265.0">
+            <children>
+                <TextField layoutX="-136.0" prefHeight="33.0" prefWidth="600.0" text="Inregistrare">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </TextField>
+                <TextField alignment="CENTER" layoutY="49.0" prefHeight="95.0" prefWidth="283.0" text="Datele:">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </TextField>
+                <TextField layoutY="142.0" prefHeight="51.0" prefWidth="283.0" text="Nume utilizator:">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField layoutY="190.0" prefHeight="51.0" prefWidth="283.0" text="Parola:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField layoutY="241.0" prefHeight="51.0" prefWidth="283.0" text="Prenume Nume:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField layoutY="290.0" prefHeight="51.0" prefWidth="283.0" text="Adresa:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField layoutY="340.0" prefHeight="51.0" prefWidth="283.0" text="Telefon:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </children>
+        </Pane>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button layoutX="17.0" layoutY="49.0" mnemonicParsing="false" prefHeight="349.0" prefWidth="183.0" text="INREGISTRARE">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Button>
+            </children></Pane>
+    </children>
+</HBox>
