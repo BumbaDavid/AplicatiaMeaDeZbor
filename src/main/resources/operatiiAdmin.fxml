@@ -9,7 +9,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminController">
    <children>
-      <VBox layoutX="5.0" layoutY="6.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="1093.0">
+      <VBox layoutX="4.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="1093.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN">
                <font>
@@ -24,37 +24,38 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tara" textAlignment="CENTER" wrappingWidth="74.669921875" GridPane.columnIndex="1" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oras" textAlignment="CENTER" wrappingWidth="69.416015625" GridPane.columnIndex="2" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aeroport:" textAlignment="CENTER" wrappingWidth="78.14453125" GridPane.columnIndex="3" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="plecareTara" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="plecareOras" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="plecareAeroport" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="destTara" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="destOras" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="destAeroport" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="nrID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stare:" textAlignment="RIGHT" wrappingWidth="69.595703125" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Actualizare St." GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="stare" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="actualizareStare" mnemonicParsing="false" onAction="#handlerActualizareSt" prefHeight="25.0" prefWidth="129.0" text="Actualizare St." GridPane.columnIndex="4" GridPane.rowIndex="3" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data Plecarii" textAlignment="CENTER" wrappingWidth="107.513671875" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data Sosirii" textAlignment="CENTER" wrappingWidth="108.3671875" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <TextField fx:id="dataPlecare" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <TextField fx:id="dataSosire" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <TextField fx:id="oraPlecarii" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <TextField fx:id="oraSosire" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="YYYY-MM-DD" textAlignment="CENTER" wrappingWidth="118.5078125" GridPane.columnIndex="5" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ora" textAlignment="CENTER" wrappingWidth="103.32421875" GridPane.columnIndex="6" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nr.Locuri" textAlignment="RIGHT" wrappingWidth="118.841796875" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" text="Actualizare Loc." GridPane.columnIndex="7" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" text="Sterge Zbor" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" text="Istoric" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numar Locuri:" textAlignment="CENTER" wrappingWidth="131.361328125" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <TextField fx:id="nrLocuri" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Button fx:id="actualizareLocuri" mnemonicParsing="false" onAction="#handlerActualizareLoc" text="Actualizare Loc." GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <Button fx:id="stergeZbor" mnemonicParsing="false" onAction="#handlerStergeZbor" text="Sterge Zbor" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  <Button fx:id="istoric" mnemonicParsing="false" onAction="#handlerIstoric" text="Istoric" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tip Bilet:" textAlignment="CENTER" wrappingWidth="131.361328125" GridPane.columnIndex="7" GridPane.rowIndex="1" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Companie:" textAlignment="CENTER" wrappingWidth="131.53125" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <TextField fx:id="companie" GridPane.columnIndex="8" GridPane.rowIndex="2" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Durata" textAlignment="CENTER" wrappingWidth="108.654296875" GridPane.columnIndex="9" GridPane.rowIndex="1" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pret(EURO)" textAlignment="CENTER" wrappingWidth="108.015625" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="10" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                  <TextField fx:id="durataZb" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                  <TextField fx:id="pret" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                  <Button fx:id="adaugaZbor" mnemonicParsing="false" onAction="#handlerAdaugaZbor" prefHeight="25.0" prefWidth="105.0" text="Adauga Zbor" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="tipBilet" prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="72.0" />
@@ -76,6 +77,26 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="33.0" text="ID" />
+                <TableColumn prefWidth="55.0" text="C2" />
+                  <TableColumn prefWidth="68.0" text="Companie" />
+                  <TableColumn prefWidth="97.0" text="OrasP" />
+                  <TableColumn prefWidth="90.0" text="AeroportP" />
+                  <TableColumn prefWidth="79.0" text="TaraD" />
+                  <TableColumn prefWidth="75.0" text="OrasD" />
+                  <TableColumn prefWidth="103.0" text="AeroportD" />
+                  <TableColumn prefWidth="51.0" text="Loc" />
+                  <TableColumn prefWidth="31.0" text="Dus" />
+                  <TableColumn prefWidth="98.0" text="DataP" />
+                  <TableColumn prefWidth="52.0" text="OraP" />
+                  <TableColumn prefWidth="86.0" text="DataS" />
+                  <TableColumn prefWidth="66.0" text="Durata" />
+                  <TableColumn prefWidth="109.0" text="Status" />
+                  <TableColumn prefWidth="107.0" text="Column X" />
+              </columns>
+            </TableView>
          </children>
       </VBox>
    </children>

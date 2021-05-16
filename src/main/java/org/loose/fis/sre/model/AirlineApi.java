@@ -7,7 +7,11 @@ import java.util.List;
 
 
 public class AirlineApi {
+    private static int userid_history;
     int userid_history = -1;
+
+    public static int SelectFlight(String text, String plecareOrasText, String plecareAeroportText, String destTaraText, String destOrasText, String destAeroportText, int nr, int tip, String companieText) {
+    }
 
     public List<FlightModel> GetFlights(Connection conn, String url, String user, String password) {
         List<FlightModel> flights=new ArrayList<FlightModel>();
@@ -112,8 +116,8 @@ public class AirlineApi {
     }
 
 
-    public int AddFlight(Connection conn, String url, String user, String password, String departure_country, String departure_city,
-                         String departure_airport, String destination_country, String destination_city, String destination_airport, int number_seats, int one_way, String airline) {
+    public static int AddFlight(String url, String user, String password, String departure_country, String departure_city, String destination_country,
+                                int number_seats, int one_way, String airline) {
 
         int count = 0;
         int result = -1;
@@ -150,8 +154,8 @@ public class AirlineApi {
                 st.close();
                 if(count > 0)
                 {
-                    int flights_id = SelectFlight(conn, url, user, password, departure_country, departure_city, departure_airport, destination_country, destination_city, destination_airport, number_seats, one_way, airline);
-                    result = AddHistory(conn, url, user, password, userid_history, flights_id);
+                    int flights_id = SelectFlight(url, user, password, departure_country, departure_city, departure_airport, destination_country, destination_city, destination_airport, number_seats, one_way, airline);
+                    result = AddHistory(url, user, password, userid_history, flights_id);
                 }
             }
 
@@ -171,8 +175,8 @@ public class AirlineApi {
         return result;
     }
 
-    public int SelectFlight(Connection conn, String url, String user, String password, String departure_country, String departure_city,
-                            String departure_airport, String destination_country, String destination_city, String destination_airport, int number_seats, int one_way, String airline) {
+    public static int SelectFlight(Connection conn, String url, String user, String password, String departure_country, String departure_city,
+                                   String departure_airport, String destination_country, String destination_city, String destination_airport, int number_seats, int one_way, String airline) {
 
         int id = -1;
         try {
@@ -217,7 +221,7 @@ public class AirlineApi {
         return id;
     }
 
-    public int AddDates(Connection conn, String url, String user, String password, String departure_date, String departure_time, String arriver_date, String arriver_time, int time, double price) {
+    public static int AddDates(String url, String user, String password, String departure_date, int time, double price) {
 
         int count = 0;
         try {
@@ -263,7 +267,7 @@ public class AirlineApi {
         return count;
     }
 
-    public int SelectDate(Connection conn, String url, String user, String password, String departure_date, String departure_time, String arriver_date, String arriver_time, int time, double price) {
+    public static int SelectDate(String url, String user, String password, String departure_date, int time, double price) {
 
         int id = -1;
         try {
@@ -305,7 +309,7 @@ public class AirlineApi {
         return id;
     }
 
-    public int AddFlightDate(Connection conn, String url, String user, String password, int flights_id, int date_time_id) {
+    public static int AddFlightDate(int flights_id, int date_time_id) {
 
         int count = 0;
         try {
@@ -499,12 +503,12 @@ public class AirlineApi {
         return id_status;
     }
 
-    public int UpdateState(Connection conn, String url, String user, String password, int id, String state) {
+    public static int UpdateState(int id, String state) {
         int count = 0;
-        int id_status = GetId(conn, url, user, password, id);
+        int id_status = GetId(id);
         System.out.println("Id_status:" + id_status);
         try {
-            conn=DriverManager.getConnection(url,user,password);
+            conn=DriverManager.getConnection();
             if(conn!=null) {
 
                 Statement statement = conn.createStatement();
@@ -581,7 +585,7 @@ public class AirlineApi {
         return count;
     }
 
-    public int DeleteFlight(Connection conn, String url, String user, String password, int id) {
+    public static int DeleteFlight(int id) {
         int count = -1;
         try {
             conn=DriverManager.getConnection(url,user,password);

@@ -12,7 +12,7 @@ import java.util.Objects;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 
-public class UserModel {
+public class UserModel{
 
     private static ObjectRepository<User> userRepository;
 
