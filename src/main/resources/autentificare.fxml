@@ -7,8 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AutentificareController">
+  <AnchorPane prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AutentificareController">
    <children>
       <GridPane layoutX="86.0" layoutY="52.0" prefHeight="297.0" prefWidth="428.0">
         <columnConstraints>
@@ -31,13 +30,14 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="220.0" text="Autentificare" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="214.0" GridPane.columnIndex="1">
+            <Button fx:id="autentif" mnemonicParsing="false" prefHeight="25.0" prefWidth="220.0" text="Autentificare" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="numeField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="214.0" GridPane.columnIndex="1">
                <font>
                   <Font size="9.0" />
                </font>
             </TextArea>
-            <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="parolaField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="textfieldMessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="214.13671875" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

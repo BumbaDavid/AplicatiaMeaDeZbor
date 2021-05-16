@@ -387,7 +387,7 @@ public class AirlineApi {
         return flights;
     }
 
-    public int GetUser(Connection conn, String url, String user, String password, String username, String pass) {
+    public static int GetUser(String url, String user) {
         int count = -1;
         try {
             conn=DriverManager.getConnection(url,user,password);
@@ -431,12 +431,13 @@ public class AirlineApi {
                 try {
                     // set all the preparedstatement parameters
                     PreparedStatement st = conn.prepareStatement(sql);
-                    st.setString(1, User.username);
-                    st.setString(2, User.password);
-                    st.setString(3, User.name);
-                    st.setString(4, User.adress);
-                    st.setString(5, User.phone);
-                    st.setInt(6, User.permissions);
+                    UserModel addUser;
+                    /*st.setString(1, addUser.username);
+                    st.setString(2, addUser.password);
+                    st.setString(3, addUser.name);
+                    st.setString(4, addUser.adress);
+                    st.setString(5, addUser.phone);
+                    st.setInt(6,addUser.permissions);*/
 
                     // execute the preparedstatement insert
                     count = st.executeUpdate();

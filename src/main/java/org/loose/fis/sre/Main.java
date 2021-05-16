@@ -19,8 +19,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         initDirectory();
         UserModel.initDatabase();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("register.fxml")));
-        primaryStage.setTitle("Registration Example");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("start.fxml")));
+        primaryStage.setTitle("Aplicatia Mea De Zbor");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
