@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OperatiiClient">
+   <children>
+      <ScrollPane layoutY="34.0" prefHeight="482.0" prefWidth="1462.0">
+         <content>
+            <Pane prefHeight="363.0" prefWidth="0.0">
+               <children>
+                  <TextField layoutY="31.0" prefHeight="34.0" prefWidth="94.0" text="Plecare:">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="3.0" layoutY="74.0" prefHeight="34.0" prefWidth="94.0" text="Destinatia:">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="CENTER" layoutX="112.0" layoutY="1.0" prefHeight="26.0" prefWidth="94.0" text="Tara">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="97.0" layoutY="36.0" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField layoutX="97.0" layoutY="79.0" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField alignment="CENTER" layoutX="248.0" layoutY="1.0" prefHeight="30.0" prefWidth="65.0" text="Oras">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="225.0" layoutY="36.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="79.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField alignment="CENTER" layoutX="373.0" layoutY="3.0" prefHeight="30.0" prefWidth="85.0" text="Aeroport">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="343.0" layoutY="36.0" prefHeight="25.0" prefWidth="147.0" />
+                  <TextField layoutX="343.0" layoutY="79.0" />
+                  <TextField layoutX="499.0" layoutY="36.0" prefHeight="26.0" prefWidth="108.0" text="Data plecarii:">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></TextField>
+                  <TextField layoutX="499.0" layoutY="78.0" prefHeight="26.0" prefWidth="116.0" text="Tipul biletului:">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="CENTER" layoutX="611.0" layoutY="6.0" prefHeight="28.0" prefWidth="126.0" text="YYYY-MM-DD">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="611.0" layoutY="37.0" prefHeight="13.0" prefWidth="127.0" />
+                  <ComboBox layoutX="618.0" layoutY="78.0" prefHeight="25.0" prefWidth="120.0" />
+                  <Button layoutX="751.0" layoutY="37.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="97.0" text="CAUTA" />
+                  <TableView layoutX="8.0" layoutY="109.0" prefHeight="257.0" prefWidth="1370.0">
+                    <columns>
+                      <TableColumn prefWidth="26.199996948242188" text="ID" />
+                      <TableColumn prefWidth="112.5999755859375" text="Companie" />
+                        <TableColumn prefWidth="103.79998779296875" text="TaraPlec" />
+                        <TableColumn prefWidth="100.79998779296875" text="OrasPlec" />
+                        <TableColumn prefWidth="108.0" text="AeroportPlec" />
+                        <TableColumn prefWidth="110.0" text="TaraDest" />
+                        <TableColumn prefWidth="57.20001220703125" text="OrasDest" />
+                        <TableColumn prefWidth="109.4000244140625" text="AeroportDest" />
+                        <TableColumn minWidth="0.0" prefWidth="57.0" text="NrLocuri" />
+                        <TableColumn prefWidth="42.20001220703125" text="Dus" />
+                        <TableColumn prefWidth="120.60003662109375" text="DataPlec" />
+                        <TableColumn prefWidth="56.4000244140625" text="OraPlec" />
+                        <TableColumn prefWidth="120.99993896484375" text="DataSosire" />
+                        <TableColumn prefWidth="69.5999755859375" text="OrasSosire" />
+                        <TableColumn prefWidth="50.800048828125" text="Durata" />
+                        <TableColumn prefWidth="52.4000244140625" text="Pret" />
+                        <TableColumn minWidth="0.0" prefWidth="74.199951171875" text="Status" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <TextField alignment="CENTER" prefHeight="34.0" prefWidth="1462.0" text="Operatii Client">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
